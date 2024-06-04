@@ -3,7 +3,7 @@ data "aws_iam_policy_document" "ec2_iam_policy_document" {
     for_each = var.iam_policy_statements
     content {
       actions = lookup(statement.value, "actions", [])
-      resources = lookup(statement.value, "resources", [*])
+      resources = lookup(statement.value, "resources", ["*"])
       effect = lookup(statement.value, "effect", "")
     }
   }
