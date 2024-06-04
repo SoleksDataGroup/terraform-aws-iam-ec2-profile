@@ -39,7 +39,7 @@ resource "aws_iam_policy_attachment" "ec2_iam_attachment" {
   policy_arn = aws_iam_policy.ec2_iam_policy.arn
 }
 
-resource "aws_iam_instance_profile" "ec2_iam_instance_profile" {
+resource "aws_iam_instance_profile" "ec2_iam_profile" {
   name = "${var.name_prefix}-iam-profile"
   role = aws_iam_role.ec2_iam_role.name
 }
