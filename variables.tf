@@ -11,7 +11,7 @@ variable "name_prefix" {
 variable "iam_policy_statements" {
   description = "IAM policy statements"
   type = list(object({
-    action = list(string)
+    actions = list(string)
     effect = string
     resources = list(string)
   }))
