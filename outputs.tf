@@ -6,3 +6,8 @@ output "arn" {
   description = "EC2 instance IAM profile arn"
   value = aws_iam_instance_profile.ec2_iam_profile.arn
 }
+
+output "name" {
+  description = "EC2 instance IAM profile arn"
+  value = aws_iam_instance_profile.ec2_iam_profile.name
+}
